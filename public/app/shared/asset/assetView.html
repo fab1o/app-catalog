@@ -1,0 +1,16 @@
+<div ng-class="{'focused': content.isFocused}" class="boxart">
+
+    <div class="thumbnail"
+         ng-style="{'background-image' : 'url({{ ::content.imageSrc }})','background-repeat' : 'no-repeat','background-size' : 'contain'}">
+
+
+        <div class="metadata">
+            <div class="attributes">
+                <h4>{{::content.title}}</h4>
+                <div>{{::content.releaseYear}}</div>
+                <div>{{::content.runTimeSec | timeDescriptive}}</div>
+            </div>
+        </div>
+
+    </div>
+</div>

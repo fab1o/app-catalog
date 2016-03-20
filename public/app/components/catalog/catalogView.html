@@ -1,0 +1,34 @@
+<div class="catalog-container" ng-controller="catalogController">
+
+    <div class="catalog-options">
+        <div class="catalog-pagination-container">
+            <ul class="catalog-pagination">
+                <li>
+                    <a ng-click="previousPage()">
+                        <span><< Prev</span>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="nextPage()">
+                        <span>Next >></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="catalog-sort">
+            Sort by:
+            <select ng-model="model.orderBy" ng-change="reOrder()">
+                <option value="title">Title</option>
+                <option value="runTimeSec">Duration</option>
+                <option value="releaseYear">Release Year</option>
+            </select>
+            <select ng-model="model.ascending" ng-change="reOrder()"
+                    ng-options="o.v as o.n for o in [{ n: 'Ascending', v: true }, { n: 'Descending', v: false }]">
+            </select>
+        </div>
+    </div>
+
+    <app-grid content="model.items"></app-grid>
+
+</div>

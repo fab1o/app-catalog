@@ -1,0 +1,11 @@
+{
+  "name": "Catalog",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": {
+    "name": "Fabio Costa"
+  },
+  "dependencies": {
+    "express": "4.13.4"
+  }
+}
